@@ -19,3 +19,8 @@ add_subdirectory(${CTMP_LIB_DIR}/ctmp-log)
 
 # The main daemon
 add_subdirectory(${CTMP_BIN_DIR}/ctmpd)
+
+# Tweaks
+string(LENGTH "${PROJECT_SOURCE_DIR}/" SOURCE_PATH_SIZE)
+add_definitions("-DSOURCE_PATH_SIZE=${SOURCE_PATH_SIZE}")
+add_definitions("-DSOURCE_PATH=\"${PROJECT_SOURCE_DIR}\"")

@@ -11,17 +11,33 @@
 
 #pragma once
 
+#include <string.h>
 #include <stdbool.h>
 
 // Global logging variables
 #define LOG_LEVEL CTMP_LOG_LEVEL_INFO
 #define LOG_COLOR true
 
+// Filename helpers
+static inline const char *strfnchr(const char *s, int c)
+{
+  const char *found = s;
+  while (*(s++))
+  {
+    if (*s == c)
+      found = s;
+  }
+  if (found != s)
+    return found + 1;
+  return s;
+}
+#define __FILE_NAME__ strfnchr(__FILE__, '/')
+
 /**
  * @brief Log wrapper macro.
  *
  */
-#define ctmp_log(level, format, ...) _ctmp_log(__func__, __LINE__, level, format, ##__VA_ARGS__);
+#define ctmp_log(level, format, ...) _ctmp_log(__FILE_NAME__, __LINE__, level, format, ##__VA_ARGS__);
 
 /**
  * @brief Log wrapper macro for `trace`.
