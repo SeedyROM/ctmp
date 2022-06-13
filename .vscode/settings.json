@@ -1,0 +1,10 @@
+{
+  "makefile.extensionOutputFolder": "./.vscode",
+  "editor.formatOnSave": true,
+  "C_Cpp.codeAnalysis.clangTidy.enabled": false,
+  "files.associations": {
+    "*.css": "postcss",
+    "*.hs": "haskell",
+    "stdlib.h": "c"
+  }
+}
