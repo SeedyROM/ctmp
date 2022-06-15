@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jun 12 20:13:00 2022
+# Make data base, printed on Wed Jun 15 00:51:37 2022
 
 # Variables
 
@@ -21,7 +21,7 @@ NO_AT_BRIDGE = 1
 # environment
 rvm_docs_type = 
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-ed00d0f1-6ac2-4451-bd5d-fddd1760dd06.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-6bcff322-af1a-42f3-9b13-799ad622335f.sock
 # environment
 rvm_quiet_flag = 
 # environment
@@ -107,7 +107,7 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
 # environment
 MFLAGS = -pqrR
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-XXXXXXi1ckIR/agent.1567
+SSH_AUTH_SOCK = /tmp/ssh-XXXXXXpO6asf/agent.1580
 # default
 .SHELLFLAGS := -c
 # environment
@@ -129,7 +129,7 @@ ZSH = /home/rombus/.oh-my-zsh
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 2209
+VSCODE_PID = 19571
 # environment
 XDG_SESSION_TYPE = x11
 # environment
@@ -143,7 +143,7 @@ rvm_ruby_make =
 # environment
 rvm_only_path_flag = 
 # environment
-SESSION_MANAGER = local/rombular:@/tmp/.ICE-unix/1513,unix/rombular:/tmp/.ICE-unix/1513
+SESSION_MANAGER = local/rombular:@/tmp/.ICE-unix/1526,unix/rombular:/tmp/.ICE-unix/1526
 # automatic
 *F = $(notdir $*)
 # environment
@@ -251,13 +251,13 @@ USER = rombus
 # default
 MAKE_VERSION := 4.3
 # environment
-GUAKE_TAB_UUID = 1cdaf89f-c64b-49da-9978-be763fbaa993
+GUAKE_TAB_UUID = cfb03665-93bb-47cc-87d8-027232538a45
 # environment
 OPAM_SWITCH_PREFIX = /home/rombus/.opam/default
 # environment
 LC_MEASUREMENT = en_US.UTF-8
 # environment
-SSH_AGENT_PID = 1568
+SSH_AGENT_PID = 1581
 # environment
 PAGER = less
 # environment
@@ -276,9 +276,9 @@ COLORTERM = truecolor
 XDG_SESSION_CLASS = user
 # environment
 VSCODE_AMD_ENTRYPOINT = vs/workbench/api/node/extensionHostProcess
- 
 # environment
 GTK2_RC_FILES = /home/rombus/.gtkrc-2.0
+ 
 # environment
 HOME = /home/rombus
 # environment
@@ -336,9 +336,9 @@ LC_IDENTIFICATION = en_US.UTF-8
 
 # Directories
 
-# . (device 2049, inode 2179648): 11 files, no impossibilities.
+# . (device 2049, inode 2179648): 12 files, no impossibilities.
 
-# 11 files, no impossibilities in 1 directories.
+# 12 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -398,12 +398,12 @@ run:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 19 / storage = 149 B / avg = 7 B
-# current buf: size = 8162 B / used = 149 B / count = 19 / avg = 7 B
+# strcache buffers: 1 (0) / strings = 20 / storage = 163 B / avg = 8 B
+# current buf: size = 8162 B / used = 163 B / count = 20 / avg = 8 B
 
-# strcache performance: lookups = 28 / hit rate = 32%
+# strcache performance: lookups = 29 / hit rate = 31%
 # hash-table stats:
-# Load=19/8192=0%, Rehash=0, Collisions=0/28=0%
-# Finished Make data base on Sun Jun 12 20:13:00 2022
+# Load=20/8192=0%, Rehash=0, Collisions=0/29=0%
+# Finished Make data base on Wed Jun 15 00:51:37 2022
 
  

@@ -23,8 +23,17 @@ ctmp_net_socket *ctmp_net_socket_open(const char *host, const int port)
   self->addr = socket_addr;
 
   self->descriptor = socket(AF_INET, SOCK_STREAM, 0);
-  if (self->descriptor == -1)
+  if (self->descriptor == 0)
     goto ctmp_net_socket_open_error;
+
+  int opt = 1;
+  if (setsockopt(self->descriptor, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt)))
+    goto ctmp_net_socket_open_error;
+  self->socket.sin_family = AF_INET;
+  self->socket.sin_addr.s_addr = INADDR_ANY;
+  self->socket.sin_port = htons(self->addr.port);
+
+  // TODO: Finish me
 
   ctmp_log_info("Socket opened at %s:%d", self->addr.host, self->addr.port);
   return self;

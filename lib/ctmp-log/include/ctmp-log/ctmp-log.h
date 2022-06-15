@@ -31,13 +31,13 @@ static inline const char *strfnchr(const char *s, int c)
     return found + 1;
   return s;
 }
-#define __FILE_NAME__ strfnchr(__FILE__, '/')
+#define __FILENAME__ strfnchr(__FILE__, '/')
 
 /**
  * @brief Log wrapper macro.
  *
  */
-#define ctmp_log(level, format, ...) _ctmp_log(__FILE_NAME__, __LINE__, level, format, ##__VA_ARGS__);
+#define ctmp_log(level, format, ...) _ctmp_log(__FILENAME__, __LINE__, level, format, ##__VA_ARGS__);
 
 /**
  * @brief Log wrapper macro for `trace`.
