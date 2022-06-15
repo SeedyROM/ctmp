@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.18)
 project(ctmp)
 
+# Build mode
+SET(CMAKE_CONFIGURATION_TYPES ${CMAKE_BUILD_TYPE} CACHE STRING "Debug" FORCE)
+
 # C11
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED true)

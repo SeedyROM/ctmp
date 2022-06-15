@@ -1,9 +1,18 @@
-.PHONY: run setup clean remove_build
+.PHONY: build build-release run run-release setup clean remove_build
 
-run:
-	@mkdir -p build
-	@cd build && ninja
+run: build
 	@./build/bin/ctmpd/ctmpd
+
+run-release: build-release
+	@./build/bin/ctmpd/ctmpd
+
+build:
+	@mkdir -p build
+	@cd build && cmake --build . --config=Debug
+
+build-release:
+	@mkdir -p build
+	@cd build && cmake --build . --config=Release
 
 setup: clean
 
