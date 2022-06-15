@@ -7,4 +7,7 @@ run:
 
 setup:
 	@mkdir -p build
-	@cmake build -G Ninja
+  @cd build; cmake . -G Ninja
+
+clean: 
+	rm -rf build

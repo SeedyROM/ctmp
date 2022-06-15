@@ -11,6 +11,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <unistd.h>
 
 #include "ctmp-net/ctmp-net.h"
 #include "ctmp-log/ctmp-log.h"
@@ -29,6 +30,7 @@ ctmp_net_socket *ctmp_net_socket_open(const char *host, const int port)
   int opt = 1;
   if (setsockopt(self->descriptor, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt)))
     goto ctmp_net_socket_open_error;
+
   self->socket.sin_family = AF_INET;
   self->socket.sin_addr.s_addr = INADDR_ANY;
   self->socket.sin_port = htons(self->addr.port);
@@ -45,6 +47,7 @@ ctmp_net_socket_open_error:
 
 void ctmp_net_socket_close(ctmp_net_socket *self)
 {
-  ctmp_log_info("Socket closed at %s:%d", self->addr.host, self->addr.port);
+  close(self->descriptor);
   free(self);
+  ctmp_log_info("Socket closed at %s:%d", self->addr.host, self->addr.port);
 }
