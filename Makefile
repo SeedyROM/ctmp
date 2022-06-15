@@ -15,10 +15,10 @@ build-release:
 	@cd build && cmake --build . --config=Release
 
 setup: clean
+	@cd build && cmake .. -G Ninja
 
 clean: remove_build
 	@mkdir -p build
-	@cd build && cmake .. -G Ninja
 
 remove_build: 
 	rm -rf build
