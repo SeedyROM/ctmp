@@ -10,14 +10,14 @@ set(CTMP_LIB_DIR lib)
 set(CTMP_BIN_DIR bin)
 
 # Library includes
+SET(LIBUV_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/${CTMP_LIB_DIR}/libuv/include")
 SET(CTMP_NET_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/${CTMP_LIB_DIR}/ctmp-net/include")
 SET(CTMP_LOG_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/${CTMP_LIB_DIR}/ctmp-log/include")
-SET(LIBUV_INCLUDE_DIR "${PROJECT_SOURCE_DIR}/${CTMP_LIB_DIR}/libuv/include")
 
 # Libraries
+add_subdirectory(${CTMP_LIB_DIR}/libuv)
 add_subdirectory(${CTMP_LIB_DIR}/ctmp-net)
 add_subdirectory(${CTMP_LIB_DIR}/ctmp-log)
-add_subdirectory(${CTMP_LIB_DIR}/libuv)
 
 # The main daemon
 add_subdirectory(${CTMP_BIN_DIR}/ctmpd)

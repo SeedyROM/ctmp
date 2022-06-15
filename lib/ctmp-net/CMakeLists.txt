@@ -10,7 +10,7 @@ target_include_directories(
 )
 
 # libuv
-target_link_libraries(ctmp-net PUBLIC libuv)
+target_link_libraries(ctmp-net PUBLIC uv)
 target_include_directories(
   ctmp-net PUBLIC
   ${LIBUV_INCLUDE_DIR}

@@ -48,6 +48,6 @@ ctmp_net_socket_open_error:
 void ctmp_net_socket_close(ctmp_net_socket *self)
 {
   close(self->descriptor);
-  free(self);
   ctmp_log_info("Socket closed at %s:%d", self->addr.host, self->addr.port);
+  free(self);
 }
